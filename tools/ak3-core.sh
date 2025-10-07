@@ -185,7 +185,7 @@ unpack_ramdisk() {
 ### dump_boot (dump and split image, then extract ramdisk)
 dump_boot() {
   split_boot;
-  unpack_ramdisk;
+#  unpack_ramdisk;
 }
 ###
 
@@ -565,7 +565,7 @@ flash_dtbo() { flash_generic dtbo; }
 
 ### write_boot (repack ramdisk then build, sign and write image, vendor_dlkm and dtbo)
 write_boot() {
-  repack_ramdisk;
+#  repack_ramdisk;
   flash_boot;
   flash_generic vendor_boot; # temporary until hdr v4 can be unpacked/repacked fully by magiskboot
   flash_generic vendor_kernel_boot; # temporary until hdr v4 can be unpacked/repacked fully by magiskboot
